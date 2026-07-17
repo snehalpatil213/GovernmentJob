@@ -1,0 +1,1774 @@
+
+
+/*==========================
+ MAIN HEADER
+==========================*/
+
+.header{
+
+    position:sticky;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    background:#fff;
+
+    z-index:999;
+
+    transition:.4s;
+    
+
+}
+
+.header-container{
+
+    height:100px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+
+/*==========================
+ LOGO
+==========================*/
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.logo img{
+
+    width:80px;
+
+}
+
+.logo-text{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.logo-text h2{
+
+    font-size:28px;
+
+    color:#111827;
+
+    font-weight:700;
+
+    line-height:1;
+
+}
+
+.logo-text span{
+
+    color:var(--primary);
+
+    font-size:18px;
+
+    font-weight:600;
+
+    margin-top:4px;
+
+}
+
+.logo-text p{
+
+    margin-top:3px;
+
+    font-size:13px;
+
+    color:#777;
+
+}
+/*====================================
+ NAVIGATION
+====================================*/
+
+.navbar{
+    display:flex;
+    align-items:center;
+}
+
+.nav-list{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.nav-list li{
+    position:relative;
+}
+
+.nav-list li a{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    padding:14px 18px;
+    color:var(--black);
+    font-size:15px;
+    font-weight:500;
+    border-radius:8px;
+    transition:var(--transition);
+    position:relative;
+}
+
+/* Hover */
+
+.nav-list li a:hover{
+    color:var(--primary);
+    background:#FFF7ED;
+}
+
+/* Active */
+
+.nav-list li a.active{
+    background:var(--primary);
+    color:#fff;
+}
+
+/* Underline */
+
+.nav-list li a::after{
+
+    content:'';
+
+    position:absolute;
+
+    left:15px;
+
+    bottom:8px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--primary);
+
+    transition:.35s;
+
+}
+
+.nav-list li a:hover::after{
+
+    width:calc(100% - 30px);
+
+}
+
+.nav-list li a.active::after{
+
+    display:none;
+
+}
+
+
+/*====================================
+ HEADER RIGHT
+====================================*/
+
+.header-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+
+/*====================================
+ SEARCH BUTTON
+====================================*/
+
+.search-btn{
+
+    width:48px;
+
+    height:48px;
+
+    border:1px solid #E5E7EB;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:17px;
+
+    transition:.35s;
+
+}
+
+.search-btn:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+    border-color:var(--primary);
+
+}
+
+
+/*====================================
+ LOGIN BUTTON
+====================================*/
+
+.login-btn{
+
+    padding:14px 28px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    border-radius:50px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.login-btn:hover{
+
+    background:var(--primary-dark);
+
+    transform:translateY(-2px);
+
+    box-shadow:0 12px 30px rgba(249,115,22,.25);
+
+}
+
+
+/*====================================
+ HEADER SCROLL
+====================================*/
+
+.header.scrolled{
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+
+/*====================================
+ DROPDOWN ICON
+====================================*/
+
+.nav-list li a i{
+
+    font-size:12px;
+
+    transition:.3s;
+
+}
+
+.nav-list li:hover>a i{
+
+    transform:rotate(180deg);
+
+}
+
+
+/*====================================
+ LOGO HOVER
+====================================*/
+
+.logo{
+
+    transition:.35s;
+
+}
+
+.logo:hover{
+
+    transform:scale(1.02);
+
+}
+
+
+/*====================================
+ UTILITIES
+====================================*/
+
+.section{
+
+    padding:90px 0;
+
+}
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.shadow{
+
+    box-shadow:var(--shadow);
+
+}
+
+.radius{
+
+    border-radius:12px;
+
+}
+/*==============================
+ DROPDOWN MENU
+===============================*/
+
+.dropdown{
+    position:relative;
+}
+
+.dropdown-menu{
+
+    position:absolute;
+
+    top:120%;
+
+    left:0;
+
+    width:260px;
+
+    background:#fff;
+
+    border-radius:12px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.35s;
+
+    overflow:hidden;
+
+    z-index:999;
+
+}
+
+.dropdown:hover .dropdown-menu{
+
+    opacity:1;
+
+    visibility:visible;
+
+    top:100%;
+
+}
+
+.dropdown-menu li{
+
+    width:100%;
+
+}
+
+.dropdown-menu li a{
+
+    display:block;
+
+    padding:14px 22px;
+
+    color:#333;
+
+    font-size:15px;
+
+    transition:.3s;
+
+    border-bottom:1px solid #f3f3f3;
+
+}
+
+.dropdown-menu li:last-child a{
+
+    border-bottom:none;
+
+}
+
+.dropdown-menu li a:hover{
+
+    background:#FFF7ED;
+
+    color:var(--primary);
+
+    padding-left:30px;
+
+}
+
+/*=========================================
+MPSC HERO SECTION
+=========================================*/
+
+/*=========================================
+    MPSC HERO SECTION - PART 1
+=========================================*/
+
+.department-container{
+    width: 100%;
+    max-width: 1400px;
+    margin: 30px auto 0;
+    padding: 0 20px;
+}
+
+/* Breadcrumb */
+
+.department-breadcrumb{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:22px;
+    font-size:15px;
+}
+
+.department-breadcrumb a{
+    text-decoration:none;
+    color:#6b7280;
+    transition:.3s;
+}
+
+.department-breadcrumb a:hover{
+    color:#f97316;
+}
+
+.department-breadcrumb span{
+    color:#f97316;
+    font-weight:600;
+}
+
+.department-breadcrumb i{
+    color:#9ca3af;
+    font-size:12px;
+}
+
+
+/*================ HERO CARD ================*/
+
+.department-hero-card{
+
+    position:relative;
+
+    display:grid;
+    grid-template-columns:140px 1fr 330px;
+
+    align-items:center;
+
+    gap:45px;
+
+    padding:50px;
+
+    border-radius:26px;
+
+    overflow:hidden;
+
+    background:linear-gradient(
+        90deg,
+        #fffdfb 0%,
+        #fff6ef 45%,
+        #ffe9d7 100%
+    );
+
+    box-shadow:
+    0 18px 45px rgba(0,0,0,.08);
+
+}
+
+
+/* Background Circle */
+
+.department-hero-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:430px;
+    height:430px;
+
+    border-radius:50%;
+
+    background:rgba(249,115,22,.08);
+
+    top:-170px;
+    right:-120px;
+
+}
+
+.department-hero-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+    height:220px;
+
+    border-radius:50%;
+
+    background:rgba(249,115,22,.05);
+
+    bottom:-90px;
+    right:230px;
+
+}
+
+
+/*================ LEFT LOGO ================*/
+
+.department-left{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+    z-index:2;
+
+}
+
+.department-logo{
+
+    width:120px;
+
+}
+
+.department-logo img{
+
+    width:100%;
+    display:block;
+
+}
+
+
+/*================ CONTENT ================*/
+
+.department-content{
+
+    position:relative;
+    z-index:2;
+
+}
+
+.department-content h1{
+
+    font-size:60px;
+    font-weight:800;
+    color:#1f2937;
+
+    margin-bottom:10px;
+
+}
+
+.department-content h2{
+
+    font-size:26px;
+    font-weight:700;
+    color:#1f2937;
+
+    margin-bottom:18px;
+
+}
+
+.department-content p{
+
+    font-size:19px;
+    line-height:1.9;
+
+    color:#4b5563;
+
+    max-width:720px;
+
+}
+/*=========================================*
+MPSC HERO SECTION - PART 2
+*=========================================*/
+
+/*=============== STATS ===============*/
+
+.department-stats{
+    display:flex;
+    gap:18px;
+    margin-top:35px;
+    flex-wrap:wrap;
+}
+
+.department-stat{
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    background:#fff;
+    border-radius:18px;
+
+    padding:18px 22px;
+    min-width:180px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+    transition:.35s;
+}
+
+.department-stat:hover{
+    transform:translateY(-5px);
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+}
+
+.department-stat .icon{
+    width:52px;
+    height:52px;
+
+    border-radius:50%;
+
+    background:#fff4eb;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    flex-shrink:0;
+}
+
+.department-stat .icon i{
+    font-size:22px;
+    color:#f97316;
+}
+
+.department-stat small{
+    display:block;
+    font-size:13px;
+    color:#6b7280;
+    margin-bottom:4px;
+}
+
+.department-stat strong{
+    font-size:34px;
+    font-weight:800;
+    color:#1f2937;
+    line-height:1;
+}
+
+/*=============== RIGHT IMAGE ===============*/
+
+.department-image{
+    position:relative;
+    z-index:2;
+
+    display:flex;
+    justify-content:flex-end;
+    align-items:flex-end;
+
+    height:100%;
+}
+
+.department-image img{
+    width:100%;
+    max-width:330px;
+    display:block;
+    object-fit:contain;
+}
+
+/* Optional Floating Animation */
+
+
+
+@keyframes mpscFloat{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+/*=========================================*
+* MPSC HERO SECTION - PART 3
+* Right Image + Animation
+*=========================================*/
+
+/*========== RIGHT IMAGE ==========*/
+
+.department-image{
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    height: 100%;
+}
+
+.department-image img{
+    width: 100%;
+    max-width: 320px;
+
+    display: block;
+    object-fit: contain;
+
+    /* animation: heroFloat 5s ease-in-out infinite; */
+}
+
+
+/*========== HOVER EFFECT ==========*/
+
+.department-hero-card{
+    transition: .35s ease;
+}
+
+.department-hero-card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 25px 55px rgba(0,0,0,.10);
+}
+
+.department-stat{
+    transition: .3s ease;
+}
+
+.department-stat:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 16px 35px rgba(249,115,22,.18);
+}
+
+
+/*========== ANIMATION ==========*/
+
+@keyframes heroFloat{
+
+    0%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-10px);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+
+}
+
+
+/*========== FADE IN ==========*/
+
+.department-left{
+    animation: fadeLeft .8s ease;
+}
+
+.department-content{
+    animation: fadeUp .9s ease;
+}
+
+.department-image{
+    animation: fadeRight 1s ease;
+}
+
+@keyframes fadeLeft{
+
+    from{
+        opacity:0;
+        transform:translateX(-40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes fadeRight{
+
+    from{
+        opacity:0;
+        transform:translateX(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}
+
+/*=========================================
+      LATEST MPSC JOBS SECTION
+=========================================*/
+
+.mpsc-jobs-section{
+
+    padding:70px 25px;
+    background:#ffffff;
+
+    display:grid;
+    grid-template-columns:2.2fr 1fr;
+    gap:30px;
+
+}
+
+
+/*=========================================
+          SECTION TITLE
+=========================================*/
+
+
+.section-title{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.section-subtitle{
+
+    color:#FF6B00;
+    font-size:14px;
+    font-weight:600;
+
+}
+
+
+
+.section-title h2{
+
+    font-size:30px;
+    color:#111827;
+    margin:5px 0;
+
+}
+
+
+
+.view-all-btn{
+
+    text-decoration:none;
+
+    background:#FF6B00;
+
+    color:white;
+
+    padding:12px 22px;
+
+    border-radius:25px;
+
+    font-size:14px;
+
+    transition:.3s;
+
+}
+
+
+
+.view-all-btn:hover{
+
+    background:#e85d00;
+
+}
+
+
+
+
+
+/*=========================================
+             JOB GRID
+=========================================*/
+
+
+.mpsc-job-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+}
+
+
+
+
+
+/*=========================================
+              JOB CARD
+=========================================*/
+
+
+.job-card{
+
+
+    background:#ffffff;
+
+    border:1px solid #E5E7EB;
+
+    padding:22px;
+
+    border-radius:15px;
+
+    position:relative;
+
+    transition:.3s;
+
+}
+
+
+
+.job-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 12px 30px rgba(0,0,0,0.10);
+
+}
+
+
+
+
+
+.job-badge{
+
+
+    position:absolute;
+
+    top:18px;
+
+    right:18px;
+
+
+    background:#16A34A;
+
+    color:white;
+
+    font-size:12px;
+
+    padding:4px 12px;
+
+    border-radius:20px;
+
+}
+
+
+
+
+
+.job-card h3{
+
+
+    color:#111827;
+
+    font-size:18px;
+
+    margin-bottom:8px;
+
+}
+
+
+
+.job-card p{
+
+
+    color:#64748B;
+
+    font-size:14px;
+
+    margin-bottom:18px;
+
+}
+
+
+
+
+.job-card ul{
+
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
+
+}
+
+
+
+.job-card ul li{
+
+
+    font-size:14px;
+
+    color:#475569;
+
+    margin-bottom:12px;
+
+}
+
+
+
+.job-card ul li i{
+
+
+    color:#FF6B00;
+
+    margin-right:8px;
+
+}
+
+
+
+
+
+/*=========================================
+              BUTTONS
+=========================================*/
+
+
+.job-buttons{
+
+
+    display:flex;
+
+    gap:10px;
+
+    margin-top:20px;
+
+}
+
+
+
+
+.apply-btn,
+.info-btn{
+
+
+    text-decoration:none;
+
+    padding:10px 18px;
+
+    border-radius:8px;
+
+    font-size:14px;
+
+    text-align:center;
+
+}
+
+
+
+
+
+.apply-btn{
+
+
+    background:#FF6B00;
+
+    color:white;
+
+}
+
+
+
+.apply-btn:hover{
+
+
+    background:#e85d00;
+
+}
+
+
+
+
+
+.info-btn{
+
+
+    border:1px solid #FF6B00;
+
+    color:#FF6B00;
+
+}
+
+
+
+
+
+.info-btn:hover{
+
+
+    background:#FFF1E8;
+
+}
+
+
+
+
+
+
+
+/*=========================================
+             RIGHT SIDEBAR
+=========================================*/
+
+
+.mpsc-jobs-right{
+
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:22px;
+
+}
+
+
+
+
+.side-box{
+
+
+    background:white;
+
+    border:1px solid #E5E7EB;
+
+    padding:22px;
+
+    border-radius:15px;
+
+}
+
+
+
+
+.side-title{
+
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:18px;
+
+}
+
+
+
+.side-title h3{
+
+
+    color:#111827;
+
+    font-size:20px;
+
+}
+
+
+
+.side-title i{
+
+
+    color:#FF6B00;
+
+}
+
+
+
+
+
+
+/*=========================================
+        LATEST NOTIFICATIONS
+=========================================*/
+
+
+.notification-item{
+
+
+    display:flex;
+
+    gap:12px;
+
+    padding:14px 0;
+
+    border-bottom:1px solid #eeeeee;
+
+}
+
+
+
+.notification-icon{
+
+
+    width:38px;
+
+    height:38px;
+
+    background:#FFF1E8;
+
+    color:#FF6B00;
+
+    border-radius:50%;
+
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+
+.notification-content h4{
+
+
+    font-size:14px;
+
+    color:#111827;
+
+    margin:0;
+
+}
+
+
+
+.notification-content span{
+
+
+    font-size:12px;
+
+    color:#64748B;
+
+}
+
+
+
+
+
+/*=========================================
+            IMPORTANT DATES
+=========================================*/
+
+
+.date-item{
+
+
+    display:flex;
+
+    gap:12px;
+
+    margin-bottom:18px;
+
+}
+
+
+
+.date-icon{
+
+
+    width:38px;
+
+    height:38px;
+
+    background:#FFF1E8;
+
+    color:#FF6B00;
+
+
+    border-radius:50%;
+
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+
+
+.date-content h4{
+
+
+    font-size:14px;
+
+    color:#111827;
+
+    margin:0;
+
+}
+
+
+
+.date-content p{
+
+
+    margin:3px 0;
+
+    color:#64748B;
+
+    font-size:13px;
+
+}
+
+
+
+
+
+/*=========================================
+          IMPORTANT LINKS
+=========================================*/
+
+
+.links-list a{
+
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+
+    text-decoration:none;
+
+    color:#374151;
+
+    padding:13px 0;
+
+    border-bottom:1px solid #eeeeee;
+
+    font-size:14px;
+
+    transition:.3s;
+
+}
+
+
+
+
+.links-list a i{
+
+
+    color:#FF6B00;
+
+}
+
+
+
+
+.links-list a:hover{
+
+
+    color:#FF6B00;
+
+    padding-left:8px;
+
+}
+.view-all-jobs{
+    margin-top:-700px;
+}
+
+.view-all-jobs a{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+
+    width:100%;
+    height:58px;
+
+    border:2px solid #ff6b00;
+    border-radius:14px;
+
+    text-decoration:none;
+
+    color:#ff6b00;
+    font-size:18px;
+    font-weight:700;
+
+    transition:.3s;
+}
+
+.view-all-jobs a:hover{
+    background:#ff6b00;
+    color:#fff;
+}
+
+
+
+
+/*=========================================
+            RESPONSIVE DESIGN
+=========================================*/
+
+
+@media(max-width:1100px){
+
+
+.mpsc-jobs-section{
+
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.mpsc-job-grid{
+
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+
+}
+
+
+
+
+
+@media(max-width:700px){
+
+
+.mpsc-jobs-section{
+
+
+    padding:40px 15px;
+
+}
+
+
+
+.section-title{
+
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:15px;
+
+}
+
+
+
+.mpsc-job-grid{
+
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.job-buttons{
+
+
+    flex-direction:column;
+
+}
+
+
+}
+
+/*=========================================
+MPSC EXAM HIGHLIGHTS
+=========================================*/
+
+.mpsc-highlights{
+    background:#fff;
+    border-radius:18px;
+    padding:28px;
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+    margin-top:-700px;
+}
+
+.section-title{
+    position:relative;
+    font-size:25px;
+    font-weight:600;
+    color:var(--black);
+    margin-bottom:30px;
+}
+
+.section-title::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-10px;
+    width:55px;
+    height:4px;
+    border-radius:50px;
+    /* background:#ff6b00; */
+}
+
+/*================ BOXES ================*/
+
+.highlight-boxes{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:18px;
+     width: 10px;
+     margin-top: -20px;
+}
+
+.highlight-box{
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    padding:18px;
+
+    background:#fff;
+
+    border:1px solid #eeeeee;
+
+    border-radius:16px;
+
+    transition:.35s;
+}
+
+.highlight-box:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 12px 25px rgba(255,107,0,.15);
+
+    border-color:#ff6b00;
+
+}
+
+.highlight-icon{
+
+    width:48px;
+    height:48px;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#fff4ec;
+
+    color:#ff6b00;
+
+    font-size:22px;
+
+    flex-shrink:0;
+
+}
+
+.highlight-text span{
+
+    display:block;
+
+    font-size:14px;
+
+    color:#6b7280;
+
+    margin-bottom:6px;
+
+}
+
+.highlight-text strong{
+
+    display:block;
+
+    font-size:18px;
+
+    line-height:1.5;
+
+    color:var(--black);
+
+    font-weight:600;
+
+}
+/*=========================================
+   MPSC DETAILS SECTION
+=========================================*/
+
+.mpsc-details-card{
+    background:#fff;
+    border:1px solid #ececec;
+    border-radius:18px;
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+    margin-top:-670px;
+    overflow:hidden;
+        width: 1045px;
+        height: 530px;
+
+}
+
+/*========== Tabs ==========*/
+
+.mpsc-tabs{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 30px;
+    border-bottom:1px solid #ececec;
+    
+}
+
+.mpsc-tabs .tab-btn{
+    background:none;
+    border:none;
+    padding:20px 0;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:600;
+    color:#222;
+    position:relative;
+    transition:.3s;
+}
+
+.mpsc-tabs .tab-btn:hover{
+    color:#ff6b00;
+}
+
+.mpsc-tabs .tab-btn.active{
+    color:#ff6b00;
+}
+
+.mpsc-tabs .tab-btn.active::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-1px;
+    width:100%;
+    height:3px;
+    background:#ff6b00;
+    border-radius:10px;
+}
+
+/*========== Content ==========*/
+
+.mpsc-details-body{
+    display:grid;
+    grid-template-columns:1.3fr .9fr;
+    gap:35px;
+    align-items:center;
+    padding:30px; 
+    
+}
+
+/*========== Left Side ==========*/
+
+.mpsc-details-left p{
+    color:#555;
+    font-size:17px;
+    line-height:1.9;
+    margin-bottom:20px;
+}
+
+.mpsc-details-left h4{
+    font-size:22px;
+    color:#222;
+    margin-bottom:18px;
+}
+
+.mpsc-details-left ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.mpsc-details-left ul li{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:16px;
+    color:#444;
+    font-size:17px;
+    line-height:1.6;
+}
+
+/* Orange Tick */
+
+.mpsc-details-left ul li::before{
+    content:"✔";
+    width:22px;
+    height:22px;
+    border-radius:50%;
+    background:#fff4eb;
+    color:#ff6b00;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:17px;
+    font-weight:700;
+    flex-shrink:0;
+}
+
+/*========== Right Image ==========*/
+
+.mpsc-details-right{
+    text-align:center;
+}
+
+.mpsc-details-right img{
+    width:100%;
+    max-width:360px;
+    border-radius:12px;
+    display:block;
+    margin:auto;
+    object-fit:cover;
+}
+
+
+
