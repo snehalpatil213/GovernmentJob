@@ -16,6 +16,506 @@ body{
     color:#1f2937;
 }
 
+.header{
+
+    position:sticky;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    background:#fff;
+
+    z-index:999;
+
+    transition:.4s;
+    
+
+}
+
+.header-container{
+
+    height:100px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+
+/*==========================
+ LOGO
+==========================*/
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.logo img{
+
+    width:80px;
+
+}
+
+.logo-text{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.logo-text h2{
+
+    font-size:28px;
+
+    color:#111827;
+
+    font-weight:700;
+
+    line-height:1;
+
+}
+
+.logo-text span{
+
+    color:var(--primary);
+
+    font-size:18px;
+
+    font-weight:600;
+
+    margin-top:4px;
+
+}
+
+.logo-text p{
+
+    margin-top:3px;
+
+    font-size:13px;
+
+    color:#777;
+
+}
+/*====================================
+ NAVIGATION
+====================================*/
+
+.navbar{
+    display:flex;
+    align-items:center;
+}
+
+.nav-list{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.nav-list li{
+    position:relative;
+}
+
+.nav-list li a{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    padding:14px 18px;
+    color:var(--black);
+    font-size:15px;
+    font-weight:500;
+    border-radius:8px;
+    transition:var(--transition);
+    position:relative;
+}
+
+/* Hover */
+
+.nav-list li a:hover{
+    color:var(--primary);
+    background:#FFF7ED;
+}
+
+/* Active */
+
+.nav-list li a.active{
+    background:var(--primary);
+    color:#fff;
+}
+
+/* Underline */
+
+.nav-list li a::after{
+
+    content:'';
+
+    position:absolute;
+
+    left:15px;
+
+    bottom:8px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--primary);
+
+    transition:.35s;
+
+}
+
+.nav-list li a:hover::after{
+
+    width:calc(100% - 30px);
+
+}
+
+.nav-list li a.active::after{
+
+    display:none;
+
+}
+
+
+/*====================================
+ HEADER RIGHT
+====================================*/
+
+.header-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+
+/*====================================
+ SEARCH BUTTON
+====================================*/
+
+.search-btn{
+
+    width:48px;
+
+    height:48px;
+
+    border:1px solid #E5E7EB;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:17px;
+
+    transition:.35s;
+
+}
+
+.search-btn:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+    border-color:var(--primary);
+
+}
+
+
+/*====================================
+ LOGIN BUTTON
+====================================*/
+
+.login-btn{
+
+    padding:14px 28px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    border-radius:50px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.login-btn:hover{
+
+    background:var(--primary-dark);
+
+    transform:translateY(-2px);
+
+    box-shadow:0 12px 30px rgba(249,115,22,.25);
+
+}
+
+
+/*====================================
+ HEADER SCROLL
+====================================*/
+
+.header.scrolled{
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+
+/*====================================
+ DROPDOWN ICON
+====================================*/
+
+.nav-list li a i{
+
+    font-size:12px;
+
+    transition:.3s;
+
+}
+
+.nav-list li:hover>a i{
+
+    transform:rotate(180deg);
+
+}
+
+
+/*====================================
+ LOGO HOVER
+====================================*/
+
+.logo{
+
+    transition:.35s;
+
+}
+
+.logo:hover{
+
+    transform:scale(1.02);
+
+}
+
+
+/*====================================
+ UTILITIES
+====================================*/
+
+.section{
+
+    padding:90px 0;
+
+}
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.shadow{
+
+    box-shadow:var(--shadow);
+
+}
+
+.radius{
+
+    border-radius:12px;
+
+}
+/*==============================
+ DROPDOWN MENU
+===============================*/
+
+.dropdown{
+    position:relative;
+}
+
+.dropdown-menu{
+
+    position:absolute;
+
+    top:120%;
+
+    left:0;
+
+    width:260px;
+
+    background:#fff;
+
+    border-radius:12px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.35s;
+
+    overflow:hidden;
+
+    z-index:999;
+
+}
+
+.dropdown:hover .dropdown-menu{
+
+    opacity:1;
+
+    visibility:visible;
+
+    top:100%;
+
+}
+
+.dropdown-menu li{
+
+    width:100%;
+
+}
+
+.dropdown-menu li a{
+
+    display:block;
+
+    padding:14px 22px;
+
+    color:#333;
+
+    font-size:15px;
+
+    transition:.3s;
+
+    border-bottom:1px solid #f3f3f3;
+
+}
+
+.dropdown-menu li:last-child a{
+
+    border-bottom:none;
+
+}
+
+.dropdown-menu li a:hover{
+
+    background:#FFF7ED;
+
+    color:var(--primary);
+
+    padding-left:30px;
+
+}
+
+
+/*======================================
+  GOOGLE NEST HUB (1024 × 600)
+=======================================*/
+@media screen and (width:1024px) and (height:600px){
+
+    .header-container{
+        height:80px;
+        padding:0 20px;
+    }
+
+    /* Logo */
+    .logo{
+        gap:10px;
+    }
+
+    .logo img{
+        width:60px;
+    }
+
+    .logo-text h2{
+        font-size:22px;
+    }
+
+    .logo-text span{
+        font-size:14px;
+    }
+
+    .logo-text p{
+        display:none;
+    }
+
+    /* Navigation */
+    .navbar{
+        display:flex;
+        align-items:center;
+    }
+
+    .nav-list{
+        gap:2px;
+    }
+
+    .nav-list li a{
+        padding:10px 12px;
+        font-size:11px;
+    }
+
+    .nav-list li a i{
+        font-size:10px;
+    }
+
+    /* Dropdown */
+    .dropdown-menu{
+        width:220px;
+    }
+
+    .dropdown-menu li a{
+        padding:12px 18px;
+        font-size:13px;
+    }
+
+    /* Right Side */
+    .header-right{
+        gap:10px;
+    }
+
+    .search-btn{
+        width:30px;
+        height:30px;
+        font-size:15px;
+        display: none;
+    }
+
+    .login-btn{
+        padding:11px 20px;
+        font-size:13px;
+    }
+}
+
+
+
+
+
 /*=========================================
             LATEST JOB HERO
 =========================================*/
@@ -2193,4 +2693,159 @@ img{
 html,
 body{
     overflow-x:hidden;
+}
+
+
+/*=========================================
+  GOOGLE NEST HUB (1024 × 600)
+=========================================*/
+@media screen and (width:1024px) and (height:600px){
+
+    .latest-openings{
+        padding:50px 0;
+    }
+
+    .openings-wrapper{
+        grid-template-columns:1.7fr 1fr;
+        gap:20px;
+    }
+
+    .opening-header{
+        margin-bottom:5px;
+    }
+
+    .opening-header h2{
+        font-size:26px;
+    }
+
+    .opening-header span{
+        width:60px;
+    }
+
+    .sort-box label{
+        font-size:13px;
+    }
+
+    .sort-box select{
+        height:40px;
+        font-size:13px;
+        padding:0 12px;
+    }
+
+    /* Job Card */
+    .opening-card{
+        grid-template-columns:70px 1fr 150px;
+        gap:15px;
+        padding:18px;
+        border-radius:15px;
+    }
+
+    .opening-logo{
+        width:50px;
+        height:50px;
+        border-radius:14px;
+    }
+
+    .opening-logo img{
+        width:40px;
+    }
+
+    .opening-content h3{
+        font-size:15px;
+        margin-bottom:6px;
+    }
+
+    .opening-content p{
+        font-size:10px;
+        margin-bottom:12px;
+    }
+
+    .title-row{
+        gap:10px;
+    }
+
+    .new-badge{
+        padding:4px 10px;
+        font-size:11px;
+    }
+
+    .opening-content ul{
+        gap:12px;
+    }
+
+    .opening-content ul li{
+        font-size:13px;
+    }
+
+    /* Right Side */
+    .sidebar-box{
+        padding:15px;
+        border-radius:15px;
+    }
+
+    .sidebar-box h3{
+        font-size:15px;
+        margin-bottom:15px;
+    }
+
+    .sidebar-search input{
+        height:40px;
+        font-size:10px;
+        /* display: none; */
+    }
+
+    .sidebar-search button{
+        width:42px;
+        height:42px;
+        /* display: none; */
+    }
+
+    .category-list a{
+        padding:10px 12px;
+        font-size:13px;
+    }
+
+    .category-list strong{
+        font-size:11px;
+        padding:3px 8px;
+    }
+
+    .latest-news h4{
+        font-size:14px;
+    }
+
+    .latest-news span{
+        font-size:12px;
+    }
+
+    .quick-links{
+        gap:8px;
+    }
+
+    .quick-links a{
+        font-size:12px;
+        padding:8px 12px;
+    }
+
+    /* Buttons */
+    .card-action{
+        width:130px;
+        align-items:center;
+        gap:10px;
+    }
+
+    .apply-btn{
+        position:static;
+        width:110px;
+        height:40px;
+        margin:0;
+        font-size:13px;
+    }
+
+    .bookmark-btn{
+        width:40px;
+        height:40px;
+        display: none;
+    }
+
 }

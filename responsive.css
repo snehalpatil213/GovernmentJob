@@ -47,7 +47,7 @@ HEADER RESPONSIVE
 
 
 /*============= 1280 × 800 (Nest Hub Max) =============*/
-@media  (min-width:1280px) and (max-height:800px){
+@media screen and (min-width:1201px) and (max-width:1280px) and (max-height:800px){
 
     .container{
         width:95%;
@@ -108,7 +108,6 @@ HEADER RESPONSIVE
     .dropdown-menu{
         width:240px;
     }
-    
 }
 
 
@@ -382,6 +381,87 @@ HEADER RESPONSIVE
 
 }
 
+/*======================================
+  GOOGLE NEST HUB (1024 × 600)
+=======================================*/
+@media screen and (width:1024px) and (height:600px){
+
+    .header-container{
+        height:80px;
+        padding:0 20px;
+    }
+
+    /* Logo */
+    .logo{
+        gap:10px;
+    }
+
+    .logo img{
+        width:60px;
+    }
+
+    .logo-text h2{
+        font-size:22px;
+    }
+
+    .logo-text span{
+        font-size:14px;
+    }
+
+    .logo-text p{
+        display:none;
+    }
+
+    /* Navigation */
+    .navbar{
+        display:flex;
+        align-items:center;
+    }
+
+    .nav-list{
+        gap:2px;
+    }
+
+    .nav-list li a{
+        padding:10px 12px;
+        font-size:11px;
+    }
+
+    .nav-list li a i{
+        font-size:10px;
+    }
+
+    /* Dropdown */
+    .dropdown-menu{
+        width:220px;
+    }
+
+    .dropdown-menu li a{
+        padding:12px 18px;
+        font-size:13px;
+    }
+
+    /* Right Side */
+    .header-right{
+        gap:10px;
+    }
+
+    .search-btn{
+        width:30px;
+        height:30px;
+        font-size:15px;
+        display: none;
+    }
+
+    .login-btn{
+        padding:11px 20px;
+        font-size:13px;
+    }
+}
+
+
+
+/* 
 @media (min-width:1024px){
 
 .menu-toggle{
@@ -433,13 +513,13 @@ HEADER RESPONSIVE
     border-bottom:1px solid #eee;
 }
 
-/* .header-right .login-btn{
+.header-right .login-btn{
     display:none;
 }
 
 .search-btn{
     display:none;
-} */
+}
 
 .logo img{
     width:60px;
@@ -461,7 +541,7 @@ HEADER RESPONSIVE
     height:80px;
 }
 
-}
+} */
 
 /*=========================================
  HERO RESPONSIVE
@@ -835,7 +915,7 @@ Desktop Layout
     right:0;
     left:auto;
     /* background-position:right center; */
-    background-repeat:no-repeat;
+    /* background-repeat:no-repeat; */
     background-size:cover;
     /* opacity:.18; */
 }
@@ -921,7 +1001,7 @@ Desktop Layout
 /*==================================================
   1280 × 800 (Nest Hub Max)
 ==================================================*/
-@media  (min-width:1280px) and (max-height:800px){
+@media screen and (min-width:1201px) and (max-width:1280px) and (max-height:800px){
 
     .hero{
         padding:40px 0;
